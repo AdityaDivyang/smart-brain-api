@@ -10,10 +10,8 @@ import { handleImageCount, handleApiCall } from './controllers/image.js';
 const db = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-angular-76834',
-      user : 'adityadivyang',
-      password : '',
-      database : 'smart-brain'
+      host : process.env.DATABASE_URL,
+      ssl: true
     }
 });  
 
